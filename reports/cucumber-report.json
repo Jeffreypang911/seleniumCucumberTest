@@ -1,0 +1,211 @@
+[
+  {
+    "description": "  As an Einstein user\n  In order to access my account information\n  I want to be able to log in to my account",
+    "elements": [
+      {
+        "id": "logging-in-to-einstein-exchange;successful-login",
+        "keyword": "Scenario",
+        "line": 7,
+        "name": "Successful login",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "name": "that I am on the login page",
+            "result": {
+              "status": "passed",
+              "duration": 8348892637
+            },
+            "line": 8,
+            "match": {
+              "location": "/Users/misty/Post-Bootcamp/einstein/step-definitions/einstein-login-steps.js:14"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "name": "I log in with valid credentials",
+            "result": {
+              "status": "passed",
+              "duration": 2792338400
+            },
+            "line": 9,
+            "match": {
+              "location": "/Users/misty/Post-Bootcamp/einstein/step-definitions/einstein-login-steps.js:20"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "name": "I should see my email in the top right corner of the page",
+            "result": {
+              "status": "passed",
+              "duration": 7049071725
+            },
+            "line": 10,
+            "match": {
+              "location": "/Users/misty/Post-Bootcamp/einstein/step-definitions/einstein-login-steps.js:30"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "After ",
+            "result": {
+              "status": "passed",
+              "duration": 316830944
+            },
+            "hidden": true,
+            "match": {
+              "location": "/Users/misty/Post-Bootcamp/einstein/node_modules/selenium-cucumber-js/runtime/world.js:221"
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@login",
+            "line": 6
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "id": "logging-in-to-einstein-exchange;log-out-from-dashboard",
+        "keyword": "Scenario",
+        "line": 13,
+        "name": "Log out from dashboard",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "name": "that I am logged in",
+            "result": {
+              "status": "passed",
+              "duration": 9284497758
+            },
+            "line": 14,
+            "match": {
+              "location": "/Users/misty/Post-Bootcamp/einstein/step-definitions/einstein-login-steps.js:43"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "name": "I select sign out from the dropdown menu",
+            "result": {
+              "status": "passed",
+              "duration": 4516202540
+            },
+            "line": 15,
+            "match": {
+              "location": "/Users/misty/Post-Bootcamp/einstein/step-definitions/einstein-login-steps.js:56"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "name": "I should be redirected to the home page",
+            "result": {
+              "status": "passed",
+              "duration": 12193266
+            },
+            "line": 16,
+            "match": {
+              "location": "/Users/misty/Post-Bootcamp/einstein/step-definitions/einstein-login-steps.js:63"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "After ",
+            "result": {
+              "status": "passed",
+              "duration": 191120223
+            },
+            "hidden": true,
+            "match": {
+              "location": "/Users/misty/Post-Bootcamp/einstein/node_modules/selenium-cucumber-js/runtime/world.js:221"
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@logout",
+            "line": 12
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "id": "logging-in-to-einstein-exchange;unsuccessful-login",
+        "keyword": "Scenario",
+        "line": 19,
+        "name": "Unsuccessful login",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "name": "that I am on the login page",
+            "result": {
+              "status": "passed",
+              "duration": 6682739756
+            },
+            "line": 20,
+            "match": {
+              "location": "/Users/misty/Post-Bootcamp/einstein/step-definitions/einstein-login-steps.js:14"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "name": "I attempt to log in with an invalid password",
+            "result": {
+              "status": "passed",
+              "duration": 2482234217
+            },
+            "line": 21,
+            "match": {
+              "location": "/Users/misty/Post-Bootcamp/einstein/step-definitions/einstein-login-steps.js:70"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "name": "I should see the error message \"Wrong username or password.\"",
+            "result": {
+              "status": "passed",
+              "duration": 786144200
+            },
+            "line": 22,
+            "match": {
+              "location": "/Users/misty/Post-Bootcamp/einstein/step-definitions/einstein-login-steps.js:80"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "After ",
+            "result": {
+              "status": "passed",
+              "duration": 236175514
+            },
+            "hidden": true,
+            "match": {
+              "location": "/Users/misty/Post-Bootcamp/einstein/node_modules/selenium-cucumber-js/runtime/world.js:221"
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@invalid",
+            "line": 18
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "logging-in-to-einstein-exchange",
+    "keyword": "Feature",
+    "line": 1,
+    "name": "Logging in to Einstein Exchange",
+    "tags": [],
+    "uri": "/Users/misty/Post-Bootcamp/einstein/features/einstein-login.feature"
+  }
+]
