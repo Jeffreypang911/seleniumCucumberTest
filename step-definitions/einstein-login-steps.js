@@ -39,7 +39,8 @@ module.exports = function () {
       return page.einsteinLogin.fillCredentials();
     })
     .then(function() {
-      return driver.findElement(by.id('signin-form-sign-in')).click();
+      driver.findElement(by.id('signin-form-sign-in')).click();
+      return driver.wait(until.urlIs(page.einsteinLogin.dashboardUrl), 5000);
     });
   });
 

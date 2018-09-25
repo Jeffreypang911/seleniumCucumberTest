@@ -1,19 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-    <testsuite name="logging-in-to-einstein-exchange;successful-login" tests="3" failures="0" skipped="0">
-        <properties>
-            <property name="@login" value="true">
-            </property>
-            <property name="URI" value="/Users/misty/Post-Bootcamp/einstein/features/einstein-login.feature">
-            </property>
-        </properties>
-        <testcase name="Given that I am on the login page" classname="logging-in-to-einstein-exchange;successful-login" time="7.53702634">
-        </testcase>
-        <testcase name="When I log in with valid credentials" classname="logging-in-to-einstein-exchange;successful-login" time="2.60377058">
-        </testcase>
-        <testcase name="Then I should see my email in the top right corner of the page" classname="logging-in-to-einstein-exchange;successful-login" time="4.094476036">
-        </testcase>
-    </testsuite>
     <testsuite name="logging-in-to-einstein-exchange;log-out-from-dashboard" tests="3" failures="0" skipped="0">
         <properties>
             <property name="@logout" value="true">
@@ -21,25 +7,11 @@
             <property name="URI" value="/Users/misty/Post-Bootcamp/einstein/features/einstein-login.feature">
             </property>
         </properties>
-        <testcase name="Given that I am logged in" classname="logging-in-to-einstein-exchange;log-out-from-dashboard" time="9.6813829">
+        <testcase name="Given that I am logged in" classname="logging-in-to-einstein-exchange;log-out-from-dashboard" time="11.301986968">
         </testcase>
-        <testcase name="When I select sign out from the dropdown menu" classname="logging-in-to-einstein-exchange;log-out-from-dashboard" time="3.342837524">
+        <testcase name="When I select sign out from the dropdown menu" classname="logging-in-to-einstein-exchange;log-out-from-dashboard" time="1.80511858">
         </testcase>
-        <testcase name="Then I should be redirected to the home page" classname="logging-in-to-einstein-exchange;log-out-from-dashboard" time="0.024038693">
-        </testcase>
-    </testsuite>
-    <testsuite name="logging-in-to-einstein-exchange;unsuccessful-login" tests="3" failures="0" skipped="0">
-        <properties>
-            <property name="@invalid" value="true">
-            </property>
-            <property name="URI" value="/Users/misty/Post-Bootcamp/einstein/features/einstein-login.feature">
-            </property>
-        </properties>
-        <testcase name="Given that I am on the login page" classname="logging-in-to-einstein-exchange;unsuccessful-login" time="7.139467126">
-        </testcase>
-        <testcase name="When I attempt to log in with an invalid password" classname="logging-in-to-einstein-exchange;unsuccessful-login" time="2.50219093">
-        </testcase>
-        <testcase name="Then I should see the error message &quot;Wrong username or password.&quot;" classname="logging-in-to-einstein-exchange;unsuccessful-login" time="0.664299526">
+        <testcase name="Then I should be redirected to the home page" classname="logging-in-to-einstein-exchange;log-out-from-dashboard" time="0.023361374">
         </testcase>
     </testsuite>
 </testsuites>

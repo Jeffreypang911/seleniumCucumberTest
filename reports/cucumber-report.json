@@ -3,72 +3,6 @@
     "description": "  As an Einstein user\n  In order to access my account information\n  I want to be able to log in to my account",
     "elements": [
       {
-        "id": "logging-in-to-einstein-exchange;successful-login",
-        "keyword": "Scenario",
-        "line": 7,
-        "name": "Successful login",
-        "steps": [
-          {
-            "arguments": [],
-            "keyword": "Given ",
-            "name": "that I am on the login page",
-            "result": {
-              "status": "passed",
-              "duration": 7537026340
-            },
-            "line": 8,
-            "match": {
-              "location": "/Users/misty/Post-Bootcamp/einstein/step-definitions/einstein-login-steps.js:4"
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "name": "I log in with valid credentials",
-            "result": {
-              "status": "passed",
-              "duration": 2603770580
-            },
-            "line": 9,
-            "match": {
-              "location": "/Users/misty/Post-Bootcamp/einstein/step-definitions/einstein-login-steps.js:10"
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "name": "I should see my email in the top right corner of the page",
-            "result": {
-              "status": "passed",
-              "duration": 4094476036
-            },
-            "line": 10,
-            "match": {
-              "location": "/Users/misty/Post-Bootcamp/einstein/step-definitions/einstein-login-steps.js:20"
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "After ",
-            "result": {
-              "status": "passed",
-              "duration": 243348363
-            },
-            "hidden": true,
-            "match": {
-              "location": "/Users/misty/Post-Bootcamp/einstein/node_modules/selenium-cucumber-js/runtime/world.js:221"
-            }
-          }
-        ],
-        "tags": [
-          {
-            "name": "@login",
-            "line": 6
-          }
-        ],
-        "type": "scenario"
-      },
-      {
         "id": "logging-in-to-einstein-exchange;log-out-from-dashboard",
         "keyword": "Scenario",
         "line": 13,
@@ -80,7 +14,7 @@
             "name": "that I am logged in",
             "result": {
               "status": "passed",
-              "duration": 9681382900
+              "duration": 11301986968
             },
             "line": 14,
             "match": {
@@ -93,11 +27,11 @@
             "name": "I select sign out from the dropdown menu",
             "result": {
               "status": "passed",
-              "duration": 3342837524
+              "duration": 1805118580
             },
             "line": 15,
             "match": {
-              "location": "/Users/misty/Post-Bootcamp/einstein/step-definitions/einstein-login-steps.js:46"
+              "location": "/Users/misty/Post-Bootcamp/einstein/step-definitions/einstein-login-steps.js:47"
             }
           },
           {
@@ -106,11 +40,11 @@
             "name": "I should be redirected to the home page",
             "result": {
               "status": "passed",
-              "duration": 24038693
+              "duration": 23361374
             },
             "line": 16,
             "match": {
-              "location": "/Users/misty/Post-Bootcamp/einstein/step-definitions/einstein-login-steps.js:53"
+              "location": "/Users/misty/Post-Bootcamp/einstein/step-definitions/einstein-login-steps.js:54"
             }
           },
           {
@@ -118,7 +52,7 @@
             "keyword": "After ",
             "result": {
               "status": "passed",
-              "duration": 187244241
+              "duration": 180020027
             },
             "hidden": true,
             "match": {
@@ -130,72 +64,6 @@
           {
             "name": "@logout",
             "line": 12
-          }
-        ],
-        "type": "scenario"
-      },
-      {
-        "id": "logging-in-to-einstein-exchange;unsuccessful-login",
-        "keyword": "Scenario",
-        "line": 19,
-        "name": "Unsuccessful login",
-        "steps": [
-          {
-            "arguments": [],
-            "keyword": "Given ",
-            "name": "that I am on the login page",
-            "result": {
-              "status": "passed",
-              "duration": 7139467126
-            },
-            "line": 20,
-            "match": {
-              "location": "/Users/misty/Post-Bootcamp/einstein/step-definitions/einstein-login-steps.js:4"
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "name": "I attempt to log in with an invalid password",
-            "result": {
-              "status": "passed",
-              "duration": 2502190930
-            },
-            "line": 21,
-            "match": {
-              "location": "/Users/misty/Post-Bootcamp/einstein/step-definitions/einstein-login-steps.js:60"
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "name": "I should see the error message \"Wrong username or password.\"",
-            "result": {
-              "status": "passed",
-              "duration": 664299526
-            },
-            "line": 22,
-            "match": {
-              "location": "/Users/misty/Post-Bootcamp/einstein/step-definitions/einstein-login-steps.js:70"
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "After ",
-            "result": {
-              "status": "passed",
-              "duration": 170081871
-            },
-            "hidden": true,
-            "match": {
-              "location": "/Users/misty/Post-Bootcamp/einstein/node_modules/selenium-cucumber-js/runtime/world.js:221"
-            }
-          }
-        ],
-        "tags": [
-          {
-            "name": "@invalid",
-            "line": 18
           }
         ],
         "type": "scenario"

@@ -2,6 +2,7 @@ module.exports = {
 
   homeUrl: 'https://einstein.exchange/',
   loginUrl: 'https://einstein.exchange/signin',
+  dashboardUrl: 'https://einstein.exchange/dashboard',
 
   email: 'email@email.com',
   password: 'password',
