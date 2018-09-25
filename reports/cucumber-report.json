@@ -14,11 +14,11 @@
             "name": "that I am on the login page",
             "result": {
               "status": "passed",
-              "duration": 8348892637
+              "duration": 7537026340
             },
             "line": 8,
             "match": {
-              "location": "/Users/misty/Post-Bootcamp/einstein/step-definitions/einstein-login-steps.js:14"
+              "location": "/Users/misty/Post-Bootcamp/einstein/step-definitions/einstein-login-steps.js:4"
             }
           },
           {
@@ -27,11 +27,11 @@
             "name": "I log in with valid credentials",
             "result": {
               "status": "passed",
-              "duration": 2792338400
+              "duration": 2603770580
             },
             "line": 9,
             "match": {
-              "location": "/Users/misty/Post-Bootcamp/einstein/step-definitions/einstein-login-steps.js:20"
+              "location": "/Users/misty/Post-Bootcamp/einstein/step-definitions/einstein-login-steps.js:10"
             }
           },
           {
@@ -40,11 +40,11 @@
             "name": "I should see my email in the top right corner of the page",
             "result": {
               "status": "passed",
-              "duration": 7049071725
+              "duration": 4094476036
             },
             "line": 10,
             "match": {
-              "location": "/Users/misty/Post-Bootcamp/einstein/step-definitions/einstein-login-steps.js:30"
+              "location": "/Users/misty/Post-Bootcamp/einstein/step-definitions/einstein-login-steps.js:20"
             }
           },
           {
@@ -52,7 +52,7 @@
             "keyword": "After ",
             "result": {
               "status": "passed",
-              "duration": 316830944
+              "duration": 243348363
             },
             "hidden": true,
             "match": {
@@ -80,11 +80,11 @@
             "name": "that I am logged in",
             "result": {
               "status": "passed",
-              "duration": 9284497758
+              "duration": 9681382900
             },
             "line": 14,
             "match": {
-              "location": "/Users/misty/Post-Bootcamp/einstein/step-definitions/einstein-login-steps.js:43"
+              "location": "/Users/misty/Post-Bootcamp/einstein/step-definitions/einstein-login-steps.js:33"
             }
           },
           {
@@ -93,11 +93,11 @@
             "name": "I select sign out from the dropdown menu",
             "result": {
               "status": "passed",
-              "duration": 4516202540
+              "duration": 3342837524
             },
             "line": 15,
             "match": {
-              "location": "/Users/misty/Post-Bootcamp/einstein/step-definitions/einstein-login-steps.js:56"
+              "location": "/Users/misty/Post-Bootcamp/einstein/step-definitions/einstein-login-steps.js:46"
             }
           },
           {
@@ -106,11 +106,11 @@
             "name": "I should be redirected to the home page",
             "result": {
               "status": "passed",
-              "duration": 12193266
+              "duration": 24038693
             },
             "line": 16,
             "match": {
-              "location": "/Users/misty/Post-Bootcamp/einstein/step-definitions/einstein-login-steps.js:63"
+              "location": "/Users/misty/Post-Bootcamp/einstein/step-definitions/einstein-login-steps.js:53"
             }
           },
           {
@@ -118,7 +118,7 @@
             "keyword": "After ",
             "result": {
               "status": "passed",
-              "duration": 191120223
+              "duration": 187244241
             },
             "hidden": true,
             "match": {
@@ -146,11 +146,11 @@
             "name": "that I am on the login page",
             "result": {
               "status": "passed",
-              "duration": 6682739756
+              "duration": 7139467126
             },
             "line": 20,
             "match": {
-              "location": "/Users/misty/Post-Bootcamp/einstein/step-definitions/einstein-login-steps.js:14"
+              "location": "/Users/misty/Post-Bootcamp/einstein/step-definitions/einstein-login-steps.js:4"
             }
           },
           {
@@ -159,11 +159,11 @@
             "name": "I attempt to log in with an invalid password",
             "result": {
               "status": "passed",
-              "duration": 2482234217
+              "duration": 2502190930
             },
             "line": 21,
             "match": {
-              "location": "/Users/misty/Post-Bootcamp/einstein/step-definitions/einstein-login-steps.js:70"
+              "location": "/Users/misty/Post-Bootcamp/einstein/step-definitions/einstein-login-steps.js:60"
             }
           },
           {
@@ -172,11 +172,11 @@
             "name": "I should see the error message \"Wrong username or password.\"",
             "result": {
               "status": "passed",
-              "duration": 786144200
+              "duration": 664299526
             },
             "line": 22,
             "match": {
-              "location": "/Users/misty/Post-Bootcamp/einstein/step-definitions/einstein-login-steps.js:80"
+              "location": "/Users/misty/Post-Bootcamp/einstein/step-definitions/einstein-login-steps.js:70"
             }
           },
           {
@@ -184,7 +184,7 @@
             "keyword": "After ",
             "result": {
               "status": "passed",
-              "duration": 236175514
+              "duration": 170081871
             },
             "hidden": true,
             "match": {
