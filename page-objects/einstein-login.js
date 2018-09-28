@@ -1,14 +1,19 @@
+require('dotenv').config()
+
 module.exports = {
 
   homeUrl: 'https://einstein.exchange/',
   loginUrl: 'https://einstein.exchange/signin',
   dashboardUrl: 'https://einstein.exchange/dashboard',
 
-  email: 'email@email.com',
-  password: 'password',
+  email: process.env.EINSTEIN_LOGIN_EMAIL,
+  password: process.env.EINSTEIN_LOGIN_PASSWORD,
 
+  signInForm: by.id('signin-form-sign-in'),
   emailField: by.css('#login-email > input'),
   passwordField: by.css('#login-password > input'),
+  accountEmail: by.css('div[data-v-6421c8fe].truncate'),
+  signOutButton: 'btn-sign-out',
 
   // Fills in email and password fields
   fillCredentials: function (password = this.password) {

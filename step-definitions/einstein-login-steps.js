@@ -8,19 +8,19 @@ module.exports = function () {
   });
 
   this.When(/^I log in with valid credentials$/, function () {
-    return driver.wait(until.elementLocated(by.id('signin-form-sign-in')), 10000)
+    return driver.wait(until.elementLocated(page.einsteinLogin.signInForm), 15000)
     .then(function(){
       return page.einsteinLogin.fillCredentials();
     })
     .then(function() {
-      return driver.findElement(by.id('signin-form-sign-in')).click();
+      return driver.findElement(page.einsteinLogin.signInForm).click();
     });
   });
 
   this.Then(/^I should see my email in the top right corner of the page$/, function () {
-    return driver.wait(until.elementLocated(by.css('div[data-v-6421c8fe].truncate')), 10000)
+    return driver.wait(until.elementLocated(page.einsteinLogin.accountEmail), 15000)
     .then(function() {
-      return driver.findElement(by.css('div[data-v-6421c8fe].truncate')).getText();
+      return driver.findElement(page.einsteinLogin.accountEmail).getText();
     })
     .then(function(text) {
       // Verify that (correct) email address is displayed
@@ -34,20 +34,20 @@ module.exports = function () {
     const loginUrl = page.einsteinLogin.loginUrl;
     driver.get(loginUrl);
 
-    return driver.wait(until.elementLocated(by.id('signin-form-sign-in')), 10000)
+    return driver.wait(until.elementLocated(page.einsteinLogin.signInForm), 15000)
     .then(function(){
       return page.einsteinLogin.fillCredentials();
     })
     .then(function() {
-      driver.findElement(by.id('signin-form-sign-in')).click();
+      driver.findElement(page.einsteinLogin.signInForm).click();
       return driver.wait(until.urlIs(page.einsteinLogin.dashboardUrl), 5000);
     });
   });
 
   this.When(/^I select sign out from the dropdown menu$/, function () {
-    return driver.wait(until.elementLocated(by.id('btn-sign-out')), 10000)
+    return driver.wait(until.elementLocated(by.id(page.einsteinLogin.signOutButton)), 15000)
     .then(function(element) {
-      return helpers.clickHiddenElement('#btn-sign-out');
+      return helpers.clickHiddenElement('#' + page.einsteinLogin.signOutButton);
     });
   });
 
@@ -59,19 +59,19 @@ module.exports = function () {
 
   // @invalid
   this.When(/^I attempt to log in with an invalid password$/, function () {
-    return driver.wait(until.elementLocated(by.id('signin-form-sign-in')), 10000)
+    return driver.wait(until.elementLocated(page.einsteinLogin.signInForm), 15000)
     .then(function(){
       return page.einsteinLogin.fillCredentials('wr0ngp4ssw0rd');
     })
     .then(function() {
-      return driver.findElement(by.id('signin-form-sign-in')).click();
+      return driver.findElement(page.einsteinLogin.signInForm).click();
     });
   });
 
   this.Then(/^I should see the error message "([^"]*)"$/, function (msg) {
     const message = driver.findElement(by.css('section[toaster] > div[message]'));
 
-    return driver.wait(until.elementIsVisible(message), 10000)
+    return driver.wait(until.elementIsVisible(message), 15000)
     .then(function(element) {
       return element.getText();
     })

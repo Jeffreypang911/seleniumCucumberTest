@@ -11,5 +11,8 @@
   "license": "ISC",
   "devDependencies": {
     "selenium-cucumber-js": "^1.6.1"
+  },
+  "dependencies": {
+    "dotenv": "^6.0.0"
   }
 }
