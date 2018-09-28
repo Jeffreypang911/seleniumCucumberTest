@@ -69,7 +69,7 @@ module.exports = function () {
   });
 
   this.Then(/^I should see the error message "([^"]*)"$/, function (msg) {
-    const message = driver.findElement(by.css('section[toaster] > div[message]'));
+    const message = driver.findElement(page.einsteinLogin.messagePopup);
 
     return driver.wait(until.elementIsVisible(message), 15000)
     .then(function(element) {
