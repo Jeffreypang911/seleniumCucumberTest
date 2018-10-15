@@ -20,3 +20,4 @@ Feature: Logging in to Einstein Exchange
     Given that I am on the login page
     When I attempt to log in with an invalid password
     Then I should see the error message "Wrong username or password."
+

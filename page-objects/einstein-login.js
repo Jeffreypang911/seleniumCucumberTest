@@ -19,7 +19,6 @@ module.exports = {
 
   // Fills in email and password fields
   fillCredentials: function (password = this.password) {
-
     driver.findElement(this.emailField).sendKeys(this.email);
 
     return driver.findElement(this.passwordField).sendKeys(password);

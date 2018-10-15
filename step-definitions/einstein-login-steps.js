@@ -1,9 +1,12 @@
 module.exports = function () {
 
+  this.BeforeScenario(function(scenario, done) {
+    driver.get(page.einsteinLogin.loginUrl);
+    done();
+  });
+
   // @login
   this.Given(/^that I am on the login page$/, function () {
-    driver.get(page.einsteinLogin.loginUrl);
-
     return driver.wait(until.urlIs(page.einsteinLogin.loginUrl), 5000);
   });
 
@@ -31,9 +34,6 @@ module.exports = function () {
 
   // @logout
   this.Given(/^that I am logged in$/, function () {
-    const loginUrl = page.einsteinLogin.loginUrl;
-    driver.get(loginUrl);
-
     return driver.wait(until.elementLocated(page.einsteinLogin.signInForm), 15000)
     .then(function(){
       return page.einsteinLogin.fillCredentials();
