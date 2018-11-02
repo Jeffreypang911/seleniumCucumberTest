@@ -1,6 +1,6 @@
 # Selenium/Cucumber Testing
 
-These tests run in Chrome.
+These tests run in Chrome (ensure this browser is installed on your system).
 
 ## Getting Started
 
