@@ -5,10 +5,21 @@ module.exports = {
   baseUrl: 'https://einstein.exchange/',
   dashboardPath: 'dashboard',
 
+  tradePath: 'trade',
+
   email: process.env.EINSTEIN_LOGIN_EMAIL,
   password: process.env.EINSTEIN_LOGIN_PASSWORD,
 
   // TODO: HTML IDs for accountEmail & messagePopup
+
+  tradeButton: by.id('btn-trade'),
+  purchaseButton: by.id('btn-buy-coin'),
+  purchaseError: by.css('div[main] > section[data-v-02c80a04] > div[data-v-02c80a04] > span[red]'),
+  // errorBox: by.css('section[data-v-02c80a04]'),
+  // purchaseButton: by.id('btn-buy-coin'),
+
+
+
   signInButton: by.css('#btn-signin > button[data-v-908e2d22]'),
   signInForm: by.css('div[login]'),
   emailField: by.id('username'),

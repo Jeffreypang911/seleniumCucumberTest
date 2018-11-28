@@ -86,5 +86,54 @@ module.exports = function () {
     });
   });
 
+
+
+ // @insufficientfunds
+  this.Given(/^that I am on the dashboard page$/, function() {
+    return driver.wait(until.urlIs(baseUrl + page.einsteinLogin.dashboardPath), 5000)
+  })
+
+  this.When(/^I select trade$/, function() {
+    return driver.wait(until.elementLocated(page.einsteinLogin.tradeButton), 5000)
+    .then(function(button){
+      return button.click()
+    })
+  });
+  
+  this.When(/^I select buy market$/, function(){
+    return driver.manage().timeouts().implicitlyWait(5000)
+      .then(function(){
+        return driver.wait(until.elementLocated(page.einsteinLogin.purchaseButton))
+      .then(function(button){
+        driver.sleep(1000)
+        return button.click();
+      })
+    })
+  })
+
+  this.Then(/^I should see an error message$/, function(){
+    const message = driver.findElement(page.einsteinLogin.purchaseError);
+    return driver.wait(until.elementIsVisible(message), 3000)
+      .then(function(element){
+        return element.getText()
+        .then(function(text){
+          expect(text).to.equal("Please note: Not enough funds.");
+        })
+      })
+  })
+
+
+      // return driver.findElement(page.einsteinLogin.tradeButton).click();
+  //   })
+  //   .then(function() {
+  //       return driver.wait(until.urlIs(baseUrl + page.einsteinLogin.dashboardPath), 5000);    
+  
+  // return driver.get(baseUrl).then(function() {
+  //   return driver.wait(until.elementLocated(page.einsteinLogin.signInButton)).then(function(button) {
+  //     return button.click();
+
+  
+
+
 };
 
