@@ -1,25 +1,34 @@
 require('dotenv').config();
 
+
 module.exports = {
-
-  baseUrl: 'https://einstein.exchange/',
-  dashboardPath: 'dashboard',
-
-  tradePath: 'trade',
-
   email: process.env.EINSTEIN_LOGIN_EMAIL,
   password: process.env.EINSTEIN_LOGIN_PASSWORD,
+  
+  // New Objects
+  baseUrl: 'https://einstein.exchange/',
+  dashboardPath: 'dashboard',
+  tradePath: 'trade',
+  buyPrice: 26,
 
-  // TODO: HTML IDs for accountEmail & messagePopup
+  BTCtradePath: 'trade?mode=advanced&instrument=BTCUSD',
+  ETHtradePath: 'trade?mode=advanced&instrument=ETHUSD',
+  LTCtradePath: 'trade?mode=advanced&instrument=LTCUSD',
+  DASHtradePath: 'trade?mode=advanced&instrument=DASHUSD',
 
   tradeButton: by.id('btn-trade'),
   purchaseButton: by.id('btn-buy-coin'),
   purchaseError: by.css('div[main] > section[data-v-02c80a04] > div[data-v-02c80a04] > span[red]'),
-  // errorBox: by.css('section[data-v-02c80a04]'),
-  // purchaseButton: by.id('btn-buy-coin'),
+  purchaseSucess: by.css('section[data-v-02c80a04] > div[data-v-02c80a04]'),
+  buyAmountField: by.css('#input-market-buy-price > input'),
 
+  // Fills in purchase amount on trade page
+  fillPurchaseAmount: function (buyPrice = this.buyPrice) {
+    driver.findElement(this.buyAmountField).sendKeys("Control-a, backspace")
+    return driver.findElement(this.buyAmountField).sendKeys(buyPrice);
+  },
 
-
+  // Given Objects
   signInButton: by.css('#btn-signin > button[data-v-908e2d22]'),
   signInForm: by.css('div[login]'),
   emailField: by.id('username'),
