@@ -22,6 +22,12 @@ Feature: Trading with Einstein Exchange
     Given that I am on the trade page
     When I purchase bitcoin
     Then I should see purchase notification
+  
+  @bitcoinsell
+  Scenario: Sucessful Bitcoin Sell
+    Given that I am on the trade page
+    When I sell bitcoin
+    Then I should see sell notification
 
   @ethereumpurchase
     Scenario: Sucessful Ethereum Purchase

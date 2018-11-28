@@ -136,7 +136,19 @@ module.exports = function () {
         return element.getText()
         .then(function(text){
           driver.sleep(4000)
-          expect(text).to.include("order has been placed for");
+          expect(text).to.include("buy");
+        })
+      })
+  })
+
+  this.Then(/^I should see sell notification$/, function(){
+    const message = driver.findElement(page.einsteinLogin.purchaseSucess);
+    return driver.wait(until.elementIsVisible(message), 5000)
+      .then(function(element){
+        return element.getText()
+        .then(function(text){
+          driver.sleep(4000)
+          expect(text).to.include("sell");
         })
       })
   })
@@ -150,6 +162,24 @@ module.exports = function () {
         return page.einsteinLogin.fillPurchaseAmount()
           .then(function(){
             return driver.wait(until.elementLocated(page.einsteinLogin.purchaseButton))
+          .then(function(button){
+            driver.sleep(4000)
+            return button.click();
+          })
+        })
+      })
+    })
+  })
+
+  // @bitcoinsell
+  this.When(/^I sell bitcoin$/, function(){
+    return driver.get(baseUrl + page.einsteinLogin.BTCtradePath).then(function() {
+      return driver.manage().timeouts().implicitlyWait(5000)
+        .then(function(){
+        driver.sleep(4000)
+        return page.einsteinLogin.fillSellAmount()
+          .then(function(){
+            return driver.wait(until.elementLocated(page.einsteinLogin.sellButton))
           .then(function(button){
             driver.sleep(4000)
             return button.click();
