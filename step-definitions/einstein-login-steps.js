@@ -135,7 +135,7 @@ module.exports = function () {
       .then(function(element){
         return element.getText()
         .then(function(text){
-          driver.sleep(4000)
+          driver.sleep(2000)
           expect(text).to.include("buy");
         })
       })
@@ -147,28 +147,10 @@ module.exports = function () {
       .then(function(element){
         return element.getText()
         .then(function(text){
-          driver.sleep(4000)
+          driver.sleep(2000)
           expect(text).to.include("sell");
         })
       })
-  })
-
-  // @bitcoinpurchase
-  this.When(/^I purchase bitcoin$/, function(){
-    return driver.get(baseUrl + page.einsteinLogin.BTCtradePath).then(function() {
-      return driver.manage().timeouts().implicitlyWait(5000)
-        .then(function(){
-        driver.sleep(4000)
-        return page.einsteinLogin.fillPurchaseAmount()
-          .then(function(){
-            return driver.wait(until.elementLocated(page.einsteinLogin.purchaseButton))
-          .then(function(button){
-            driver.sleep(4000)
-            return button.click();
-          })
-        })
-      })
-    })
   })
 
   // @bitcoinsell
@@ -189,45 +171,17 @@ module.exports = function () {
     })
   })
 
-  // @ethereumpurchase
-  this.When(/^I purchase ethereum$/, function(){
-    return driver.get(baseUrl + page.einsteinLogin.ETHtradePath).then(function() {
-      return driver.manage().timeouts().implicitlyWait(5000)
-        .then(function(){
-        driver.sleep(4000)
-        return page.einsteinLogin.fillPurchaseAmount()
-          .then(function(){
-            return driver.wait(until.elementLocated(page.einsteinLogin.purchaseButton))
-          .then(function(button){
-            driver.sleep(4000)
-            return button.click();
-          })
-        })
-      })
-    })
-  })
-
-  // @litecoinpurchase
-  this.When(/^I purchase litecoin$/, function(){
-    return driver.get(baseUrl + page.einsteinLogin.LTCtradePath).then(function() {
-      return driver.manage().timeouts().implicitlyWait(5000)
-        .then(function(){
-        driver.sleep(4000)
-        return page.einsteinLogin.fillPurchaseAmount()
-          .then(function(){
-            return driver.wait(until.elementLocated(page.einsteinLogin.purchaseButton))
-          .then(function(button){
-            driver.sleep(4000)
-            return button.click();
-          })
-        })
-      })
-    })
-  })
-
   // @dashcoinpurchase
-  this.When(/^I purchase dashcoin$/, function(){
-    return driver.get(baseUrl + page.einsteinLogin.DASHtradePath).then(function() {
+  this.When(/^I purchase dashcoin$/, () => purchaseCurrency('ETHtradePath'))
+  // @bitcoinpurchase
+  this.When(/^I purchase bitcoin$/, () => purchaseCurrency('BTCtradePath'))
+  // @ethereumpurchase
+  this.When(/^I purchase ethereum$/, () => purchaseCurrency('ETHtradePath'))
+  // @litecoinpurchase
+  this.When(/^I purchase litecoin$/, () => purchaseCurrency('LTCtradePath'))
+
+  function purchaseCurrency(tradePath){
+    return driver.get(baseUrl + page.einsteinLogin[tradePath]).then(function() {
       return driver.manage().timeouts().implicitlyWait(5000)
         .then(function(){
         driver.sleep(4000)
@@ -241,6 +195,7 @@ module.exports = function () {
         })
       })
     })
-  })
-};
+  }
+}
+
 
